@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Extractor Ultimate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>📘 Word Extractor Ultimate</h1>
+  <p class="sub">색 선택 → 단어 추출 → 한국어 뜻 + 예문 자동 생성</p>
+
+  <input type="file" id="pdfInput" accept="application/pdf">
+  <button onclick="processPDF()">분석 시작</button>
+
+  <div class="controls">
+    <label>색 허용 범위: <span id="tolVal">50</span></label>
+    <input type="range" min="10" max="100" value="50" id="tolerance">
+  </div>
+
+  <canvas id="pdfCanvas"></canvas>
+
+  <div id="colorPreview"></div>
+
+  <h2>📋 결과</h2>
+  <button onclick="exportWords()">TXT 다운로드</button>
+  <ul id="wordList"></ul>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
