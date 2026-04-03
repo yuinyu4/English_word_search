@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF 핑크 단어 추출기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📘 핑크 형광펜 단어 추출기</h1>
+
+  <input type="file" id="pdfInput" accept="application/pdf">
+  <button onclick="processPDF()">분석 시작</button>
+
+  <canvas id="pdfCanvas"></canvas>
+
+  <h2>📋 추출된 단어</h2>
+  <ul id="wordList"></ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
